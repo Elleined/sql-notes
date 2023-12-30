@@ -47,6 +47,41 @@ Notes for SQL
 - **COUNT(column_name)**
 
 # Data Types
+## Text Data Types
+### String
+- VARCHAR(size)
+- CHAR(size)
+- ENUM(val1, val2, val3, ...)
+
+### Text
+- TEXT
+- TINYTEXT
+- MEDIUMTEXT
+- LONGTEXT
+
+### Blob 
+- BLOB
+- TINYBLOB
+- MEDIUMBLOB
+- LONGBLOB
+
+## Numeric Data Types
+- FLOAT
+- DECIMAL
+- DOUBLE
+
+### INT
+- INT
+- TINYINT
+- MEDIUMINT
+- BIGINT
+
+## Date and Time Data Types
+- DATE
+- TIME
+- DATETIME
+- TIMESTAMP
+
 # Operators
 ## Logical Operators
 ## Comparison Operators
