@@ -84,8 +84,20 @@ Notes for SQL
 
 # Operators
 ## Logical Operators
+- ** **
+- ** **
 ## Comparison Operators
-## Arithmethic Operators
+- **>**: Greater than
+- **>=**: Greater than or equal to
+- **!>**: Not greater than
+
+- **<**: Less than
+- **<=**: Less tham or equal to
+- **!<**: Not less than
+
+- **!=**: Not equal to
+- **<>**: Not equal to
+
 # Clauses
 # Keys
 # Joins
