@@ -46,3 +46,16 @@ Notes for SQL
 - **MAX(column_name)**
 - **COUNT(column_name)**
 
+# Data Types
+# Operators
+## Logical Operators
+## Comparison Operators
+## Arithmethic Operators
+# Clauses
+# Keys
+# Joins
+# Index
+# Function
+# Stored Procedure
+
+# Different ways to insert record in database table
