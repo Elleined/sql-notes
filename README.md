@@ -84,8 +84,15 @@ Notes for SQL
 
 # Operators
 ## Logical Operators
-- ** **
-- ** **
+- **ALL**
+- **IN**
+- **ANY**
+- **AND**
+- **OR**
+- **LIKE**
+- **NOT**
+- **BETWEEN** 
+- **IS NULL**
 ## Comparison Operators
 - **>**: Greater than
 - **>=**: Greater than or equal to
