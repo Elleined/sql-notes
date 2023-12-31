@@ -202,4 +202,10 @@ ORDER BY column_name
 # Stored Procedure
 # Views
 
-# Different ways to insert record in database table
+### Different ways to insert record in database table
+### Different ways to select record in database table
+
+### Copy table data into another table
+
+### [How to backup and restore database](https://github.com/Elleined/mysql-backup-script)
+
