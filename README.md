@@ -35,6 +35,8 @@ Notes for SQL
 - SELECT
 
 ## DCL (Data Control Languange)
+- Used to control access to database schema and privileges to different users to control security and permissions.
+
 ### Commands
 - GRANT
 - REVOKE
@@ -48,18 +50,18 @@ Notes for SQL
 
 # Data Types
 ## Text Data Types
-### String
+##### String
 - VARCHAR(size)
 - CHAR(size)
 - ENUM(val1, val2, val3, ...)
 
-### Text
+##### Text
 - TEXT
 - TINYTEXT
 - MEDIUMTEXT
 - LONGTEXT
 
-### Blob 
+##### Blob 
 - BLOB
 - TINYBLOB
 - MEDIUMBLOB
@@ -70,7 +72,7 @@ Notes for SQL
 - DECIMAL
 - DOUBLE
 
-### INT
+##### INT
 - INT
 - TINYINT
 - MEDIUMINT
