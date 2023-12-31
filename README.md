@@ -124,8 +124,19 @@ FROM table_name
 WHERE column_name
 LIKE '%string%'
 ```
-- **BETWEEN** 
-- **IS NULL**
+- **BETWEEN**: returns all of the rows of table if the specified range of values match with table data.
+```
+SELECT column_name
+FROM table_name
+WHERE column_name
+BETWEEN <starting_value> AND <ending_value>
+```
+- **IS NULL**: returns all of the rows of table if specified column value is null.
+```
+SELECT column_name
+FROM table_name
+WHERE column_name IS NULL
+```
 
 ## Logical Operators
 - **AND**
