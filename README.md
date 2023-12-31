@@ -111,11 +111,18 @@ IN (val1, val2, val...)
 ```
 SELECT column_name
 FROM table_name
-WHERE column_name = ANY(val1, val2, ...)
+WHERE column_name <comparison operator> ANY(val1, val2, ...)
 ```
 - **LIKE**: returns all the rows of table if given condition match with table data.
+  ###### Different like pattern matching
+  - **'string%'**: means starting with given string.
+  - **'%string'**: means ending with given string.
+  - **'%string%'**: means any record containing the string.
 ```
-
+SELECT column_name
+FROM table_name
+WHERE column_name
+LIKE '%string%'
 ```
 - **BETWEEN** 
 - **IS NULL**
@@ -134,6 +141,7 @@ WHERE column_name = ANY(val1, val2, ...)
 - **<=**: Less tham or equal to
 - **!<**: Not less than
 
+- **=**: Equal to
 - **!=**: Not equal to
 - **<>**: Not equal to
 
