@@ -94,7 +94,15 @@ RENAME TABLE old_table_name TO new_table_name
 - Used to read/ retrieve a record in database table.
 
 ### Commands
-- SELECT
+###### SELECT
+- ###### Without specified columns
+```
+SELECT * FROM table_name
+```
+- ###### With specified columns
+```
+SELECT column1, column2, ... FROM table_name
+```
 
 ## DCL (Data Control Languange)
 - Used to control access to database schema and privileges to different users to control security and permissions.
