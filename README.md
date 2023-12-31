@@ -172,10 +172,34 @@ WHERE column_name NOT NULL
 - **<>**: Not equal to
 
 # Clauses
+- **DISTINCT**: Used to remove all the duplicate values in returned rows.
+```
+SELECT DISTINCT column_name
+FROM table_name
+```
+- **LIMIT**: Used to limit the returned rows with specified number of rows you want.
+```
+SELECT column_name
+FROM table_name
+LIMIT <number_of_rows>
+```
+- **WHERE**: Used to perform condition based query.
+```
+SELECT column_name
+FROM table_name
+WHERE <condition>
+```
+- **ORDER BY**: Used to sort the returned rows via specified column with ascending as default.
+```
+SELECT column_name
+FROM table_name
+ORDER BY column_name
+```
 # Keys
 # Joins
 # Index
 # Function
 # Stored Procedure
+# Views
 
 # Different ways to insert record in database table
