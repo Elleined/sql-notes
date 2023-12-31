@@ -259,6 +259,16 @@ FROM table_name
 ORDER BY column_name
 ```
 # Keys
+###### Primary Key
+- A value that uniquely identifies a record/ row.
+###### Foreign Key
+- A primary key of table that is used in another table.
+###### Candidate Key
+- A value that can be choosen as primary key also.
+###### Alternate Key
+- A candidate key that is not choosen as primary key.
+###### Surrogate Key
+- A system generated-value as primary key.
 # Joins
 # Index
 # Function
