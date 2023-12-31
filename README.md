@@ -92,15 +92,16 @@ Notes for SQL
 - TIMESTAMP
 
 # Operators
-## Logical Operators
+## Special Operators
 - **ALL**: returns true if all the values match to the given predicate. 
-- **IN**: 
-- **ANY**
+- **IN**: returns true if the given values match with given predicate.  
+- **ANY**: returns true if any of the values match with the given predicate.
+
 - **LIKE**
 - **BETWEEN** 
 - **IS NULL**
 
-## Special Operators
+## Logical Operators
 - **AND**
 - **OR**
 - **NOT**
