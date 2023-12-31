@@ -93,11 +93,30 @@ Notes for SQL
 
 # Operators
 ## Special Operators
-- **ALL**: returns true if all the values match to the given predicate. 
-- **IN**: returns true if the given values match with given predicate.  
-- **ANY**: returns true if any of the values match with the given predicate.
+- **ALL**: returns all the rows of table if all the values match to table data.
+```
+SELECT column_name
+FROM table_name
+WHERE column_name
+ALL condition
+```
+- **IN**: returns all the rows of table if the given values match with table data.
+```
+SELECT column_name
+FROM table_name
+WHERE column_name
+IN (val1, val2, val...)
+```
+- **ANY**: returns all the rows of table if any of the values match with table data.
+```
+SELECT column_name
+FROM table_name
+WHERE column_name = ANY(val1, val2, ...)
+```
+- **LIKE**: returns all the rows of table if given condition match with table data.
+```
 
-- **LIKE**
+```
 - **BETWEEN** 
 - **IS NULL**
 
