@@ -315,9 +315,9 @@ DELIMITER ;
 ALTER TABLE table_name ADD FULLTEXT(columns...)
 
 -- Now when you query
-SELECT column_name
+SELECT column_name(s)
 FROM table_name
-WHERE MATCH (column_with_fulltext_index)
+WHERE MATCH (columns_with_fulltext_index)
 AGAINST (value_you_want_to_search)
 ```
 
