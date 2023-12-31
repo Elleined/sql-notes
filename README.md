@@ -272,6 +272,16 @@ ORDER BY column_name
 # Joins
 # Index
 # Function
+- Used to passed a argument then strictly return single row.
+```
+CREATE FUNCTION function_name (parameter1, parameter2, ...)
+RETURNS datatype
+BEGIN
+     DECLARE variable_name datatype;
+     SET variable_name = // Code to be executed to assign a value to variable
+     RETURN variable_name;
+END;
+```
 # Stored Procedure
 # Views
 
