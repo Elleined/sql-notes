@@ -284,8 +284,11 @@ BEGIN
 END //
 DELIMITER ;
 ```
+###### Notes
+- You cannot use stored procedure inside function
+- Can only return strictly one row.
 # Stored Procedure
-- Used to have pre-compiled query that can be executed for repititive task and can return one, none, or more rows.
+- Used to have pre-compiled query that can be executed for repititive task.
 ```
 DELIMITER //
 CREATE PROCEDURE procedure_name (
@@ -305,6 +308,7 @@ DELIMITER ;
 # Views
 # Triggers
 
+### Search effectively in database table
 ### Copy table data into another table
 ### [How to backup and restore database](https://github.com/Elleined/mysql-backup-script)
 
