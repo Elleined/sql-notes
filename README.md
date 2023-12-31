@@ -33,17 +33,17 @@ DELETE FROM table_name
 WHERE condition
 ```
 ###### INSERT
-- Without specified columns
+- ###### Without specified columns
 ```
 INSERT INTO table_name
 VALUES (...)
 ```
-- With specified columns
+- ###### With specified columns
 ```
 INSERT INTO table_name (column1, column2, ...)
 VALUES (val1, val2, ...)
 ```
-- Multiple record in single query
+- ###### Multiple record in single query
 ```
 INSERT INTO table_name (column1, column2, ...)
 VALUES
@@ -56,11 +56,39 @@ VALUES
 - Used to define and manage database schema/ structure.
 
 ### Commands
-- CREATE
-- DROP
-- TRUNCATE
-- ALTER
-- RENAME
+###### CREATE
+```
+CREATE TABLE table_name (
+id INT AUTO_INCREMENT PRIMARY KEY,
+column_name1 datatype1,
+column_name2 datatype2
+);
+```
+###### DROP
+```
+DROP TABLE table_name
+```
+###### TRUNCATE
+```
+TRUNCATE TABLE table_name
+```
+###### ALTER
+- ###### Add column
+```
+ALTER TABLE table_name ADD COLUMN column_name data_type
+```
+- ###### Drop column
+```
+ALTER TABLE table_name DROP COLUMN column_name
+```
+- ###### Rename column name
+```
+ALTER TABLE table_name RENAME COLUMN old_column_name TO new_column_name
+```
+###### RENAME
+```
+RENAME TABLE old_table_name TO new_table_name
+```
 
 ## DQL (Data Query Languange)
 - Used to read/ retrieve a record in database table.
