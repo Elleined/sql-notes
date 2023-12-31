@@ -1,6 +1,13 @@
 # sql-notes
 Notes for SQL
 
+# 2 Database Components
+### Client
+- MySQL Workbench
+- SQL Command Line Client
+### Server
+- SQL Server: the one that will be installed in you local machine thats why we can have multiple clients connected to server remotely or locally.
+
 # 5 SQL Command Categories
 ## TCL (Transaction Control Languange)
 - Used to control beginning and end of sql transaction to ensure consistency and integrity of data.
@@ -86,15 +93,18 @@ Notes for SQL
 
 # Operators
 ## Logical Operators
-- **ALL**
-- **IN**
+- **ALL**: returns true if all the values match to the given predicate. 
+- **IN**: 
 - **ANY**
-- **AND**
-- **OR**
 - **LIKE**
-- **NOT**
 - **BETWEEN** 
 - **IS NULL**
+
+## Special Operators
+- **AND**
+- **OR**
+- **NOT**
+
 ## Comparison Operators
 - **>**: Greater than
 - **>=**: Greater than or equal to
