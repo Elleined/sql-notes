@@ -139,9 +139,24 @@ WHERE column_name IS NULL
 ```
 
 ## Logical Operators
-- **AND**
-- **OR**
-- **NOT**
+- **AND**: returns all of the rows of table if condition1 and condition2 are both true.
+```
+SELECT column_name
+FROM table_name
+WHERE condition1 AND condition2
+```
+- **OR**: returns all of the rows of table if either condition1 and condition2 are true.
+```
+SELECT column_name
+FROM table_name
+WHERE condition1 OR condition2
+```
+- **NOT**: returns all of the rows of table that doesn't match with table data to the given condition.
+```
+SELECT column_name
+FROM table_name
+WHERE column_name NOT NULL
+```
 
 ## Comparison Operators
 - **>**: Greater than
