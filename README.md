@@ -113,7 +113,7 @@ SELECT column_name
 FROM table_name
 WHERE column_name <comparison operator> ANY(val1, val2, ...)
 ```
-- **LIKE**: returns all the rows of table if given condition match with table data.
+- **LIKE**: returns all the rows of table if given pattern match with table data.
   ###### Different like pattern matching
   - **'string%'**: means starting with given string.
   - **'%string'**: means ending with given string.
