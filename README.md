@@ -308,7 +308,30 @@ DELIMITER ;
 # Views
 # Triggers
 
-### Search effectively in database table
+# Fulltext search
+- Used to easily search text block inside table column.
+```
+-- First alter the table
+ALTER TABLE table_name ADD FULLTEXT(columns...)
+
+-- Now when you query
+SELECT column_name
+FROM table_name
+WHERE MATCH (column_with_fulltext_index)
+AGAINST (value_you_want_to_search)
+```
+
+###### Fulltext Support
+- ###### +: Means keyword must be present in each row returned.
+- ###### -: Means keyword must not be in each row returned.
+- ###### *: Serves as wildcard
+- ###### ": Means MySQL will literally search the table with the exact phrase.
+
 ### Copy table data into another table
+```
+INSERT INTO new_table_name (columns...)
+SELECT column_names_to_be_copied
+FROM table_to_be_copied
+```
 ### [How to backup and restore database](https://github.com/Elleined/mysql-backup-script)
 
