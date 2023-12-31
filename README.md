@@ -21,9 +21,36 @@ Notes for SQL
 - Used to manage and manipulate the data in database table like inserting new record, updating existing record, and deleting existing record.
 
 ### Commands
-- UPDATE
-- DELETE
-- INSERT
+###### UPDATE  
+```
+UPDATE table_name
+SET column_name = <new_value>
+WHERE condition
+```
+###### DELETE
+```
+DELETE FROM table_name
+WHERE condition
+```
+###### INSERT
+- Without specified columns
+```
+INSERT INTO table_name
+VALUES (...)
+```
+- With specified columns
+```
+INSERT INTO table_name (column1, column2, ...)
+VALUES (val1, val2, ...)
+```
+- Multiple record in single query
+```
+INSERT INTO table_name (column1, column2, ...)
+VALUES
+(val1, val2, ...),
+(val1, val2, ...),
+(val1, val2, ...)
+```
 
 ## DDL (Data Definition Languange)
 - Used to define and manage database schema/ structure.
@@ -202,10 +229,6 @@ ORDER BY column_name
 # Stored Procedure
 # Views
 
-### Different ways to insert record in database table
-### Different ways to select record in database table
-
 ### Copy table data into another table
-
 ### [How to backup and restore database](https://github.com/Elleined/mysql-backup-script)
 
