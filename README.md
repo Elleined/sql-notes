@@ -274,16 +274,36 @@ ORDER BY column_name
 # Function
 - Used to passed a argument then strictly return single row.
 ```
+DELIMITER // 
 CREATE FUNCTION function_name (parameter1, parameter2, ...)
-RETURNS datatype
+RETURNS datatype DETERMINISTIC
 BEGIN
      DECLARE variable_name datatype;
-     SET variable_name = // Code to be executed to assign a value to variable
+     <query result> INTO variable_name
      RETURN variable_name;
-END;
+END //
+DELIMITER ;
 ```
 # Stored Procedure
+- Used to have pre-compiled query that can be executed for repititive task and can return one, none, or more rows.
+```
+DELIMITER //
+CREATE PROCEDURE procedure_name (
+IN parameter1 datatype1,
+IN parameter2 datatype2)
+BEGIN
+     // Code here
+END //
+
+DELIMITER ;
+```
+
+###### Notes
+- You can used function inside stored procedure.
+- You can return multiple rows in stored procedure.
+- Stored procedure is also used for security and access control.
 # Views
+# Triggers
 
 ### Copy table data into another table
 ### [How to backup and restore database](https://github.com/Elleined/mysql-backup-script)
