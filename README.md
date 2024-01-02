@@ -277,10 +277,10 @@ CREATE INDEX index_name
 ON table_name (column_name...)
 ```
 ##### Index Advantage
-- [ ] Make SELECT statement faster
-- [ ] Make Filtering and sorting faster
+- [x] Make SELECT statement faster
+- [x] Make Filtering and sorting faster
 ##### Index Disadvantage
-- [ ] Make INSERT, DELETE, and UPDATE slower
+- [x] Make INSERT, DELETE, and UPDATE slower
 ###### Because adding indexes takes up storage just like the indexing in the book it makes searching easier with help of indec but inserting, deleting, and updating of content will become slower because you need to adjust all the index and it also consume more pages making it heavy same thing with MySQL index.
 
 # Function
@@ -299,6 +299,7 @@ DELIMITER ;
 ###### Notes
 - You cannot use stored procedure inside function
 - Can only return strictly one row.
+- Commonly used to passed a primary key to return single value from primary key row.
 # Stored Procedure
 - Used to have pre-compiled query that can be executed for repititive task.
 ```
