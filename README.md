@@ -271,6 +271,18 @@ ORDER BY column_name
 - A system generated-value as primary key.
 # Joins
 # Index
+- Is a BTREE data structure that allows you to search faster.
+```
+CREATE INDEX index_name
+ON table_name (column_name...)
+```
+##### Index Advantage
+- [ ] Make SELECT statement faster
+- [ ] Make Filtering and sorting faster
+##### Index Disadvantage
+- [ ] Make INSERT, DELETE, and UPDATE slower
+###### Because adding indexes takes up storage just like the indexing in the book it makes searching easier with help of indec but inserting, deleting, and updating of content will become slower because you need to adjust all the index and it also consume more pages making it heavy same thing with MySQL index.
+
 # Function
 - Used to passed a argument then strictly return single row.
 ```
