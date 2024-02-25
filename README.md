@@ -319,6 +319,18 @@ DELIMITER ;
 - You can return multiple rows in stored procedure.
 - Stored procedure is also used for security and access control.
 # Views
+- Is a virtual table that is based on the result set of the real table. Any modifications in a real table will also affect the views. Basically views are like creating a virtual table that is branching out from the real table and can also be interacted just like a real table.
+  
+- Commonly used in SELECT statements. becuase as you realize stored procedure is used commonly in UPDATE and DELETE or DML commands and  views is used in SELECT or DQL commands.
+
+### Why use view
+- Restrict the user from seeing the real table structure thus adding extra layer of security.
+- Abstracts/ Simplify the complex query returned from the complex real table and complex table joinings.
+
+### Views Restrictions
+- Cannot create index in views.
+- Cannot create trigger in views.
+
 # Triggers
 
 # Fulltext search
