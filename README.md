@@ -365,9 +365,9 @@ FROM table_to_be_copied
 - Make sure your local machine (Where your MySQL Server is installed) and your other device (The device that will connect in your local machine MySQL Server) is connected in the same wifi or network for them to communicate.
 - Get your local machine (Where your MySQL Server is installed) IP Address just search how to get your IPv4 in internet.
 - Once you get your local machine IPv4 Address go in your other device normally you will need:
-- local machine IPv4 Address
-- What port does your local machine MySQL Server is running.
-- Created user credential username and password you created earlier in your local machine.
+  - your local machine IPv4 Address
+  - What port does your local machine MySQL Server is running.
+  - Created user credential username and password you created earlier in your local machine.
 - And thats it you will be able access your local machine MySQL Server with other device.
 
 ## Analogy
