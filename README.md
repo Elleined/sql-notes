@@ -360,3 +360,15 @@ FROM table_to_be_copied
 ```
 ### [How to backup and restore database](https://github.com/Elleined/mysql-backup-script)
 
+# How to connect to your local machine MySQL Server remotely
+- First create a database user in your local machine (Where your MySQL Server is installed) with specified priviliges you want.
+- Make sure your local machine (Where your MySQL Server is installed) and your other device (The device that will connect in your local machine MySQL Server) is connected in the same wifi or network for them to communicate.
+- Get your local machine (Where your MySQL Server is installed) IP Address just search how to get your IPv4 in internet.
+- Once you get your local machine IPv4 Address go in your other device normally you will need:
+- local machine IPv4 Address
+- What port does your local machine MySQL Server is running.
+- Created user credential username and password you created earlier in your local machine.
+- And thats it you will be able access your local machine MySQL Server with other device.
+
+## Analogy
+- So normally to access your MySQL Server in your local machine you user the localhost:3306 and you will access it using other device with 192.168.xxx.xxx:3306 where localhost is your local machine default IP of 127.0.0.1 meanwhile 192.168.xxx.xxx is the IPv4 of your local machine in internet. Thats why you need them to be in the same network for them to communicate so that your other device will communicate/ connect in your local machine IPv4 Address allowing other device to access your local machine MySQL Server. So don't be confuse with localhost and 192.168.xxx.xxx, localhost is your local machine private IP while 192.168.xxx.xxx is your local machine public IP.
