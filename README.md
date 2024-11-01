@@ -362,6 +362,44 @@ FROM table_to_be_copied
 
 # How to connect to your local machine MySQL Server remotely
 - First create a database user in your local machine (Where your MySQL Server is installed) with specified priviliges you want.
+```sql
+-- Step 1. Create user
+-- Template:
+CREATE USER '<username>'@'<allow-ip-address>' IDENTIFIED BY '<password>';
+
+-- Where <username> is the username.
+-- Where <allow-ip-address> is the ip addresses allowed to access the <username> user. To allow all the ip address to access that user we use '%'. Or you can specify specific ip address (The remote pc ip address) for more security concerns
+-- Where <password> is the password
+
+-- Example:
+-- Specific IP Address
+CREATE USER 'elleined'@'192.168.1.1'  IDENTIFIED BY 'elleined';
+
+-- All IP Address
+CREATE USER 'elleined'@'%'  IDENTIFIED BY 'elleined';
+
+Step 2: Grant privileges to a user
+-- Template:
+GRANT ALL PRIVILEGES ON '<database-name>'.'<table-name>' TO '<username>'.'<allow-ip-address>';
+
+-- WHERE <database-name> is the database that the specified <username> user allowed to access. Use * to allow all database to be accessed.
+-- WHERE <table-name> is the table that the specified <username> user allowed to access within the specified <database-name>. Use * to allow all table to be accessed.
+-- WHERE the <username> is the username you specify in step 1 in this case (elleined).
+-- WHERE the <allow-ip-address> is the ip address you specify in step 1 in this case (192.168.1.1).
+
+-- Example:
+-- Granting specific database and table
+GRANT ALL PRIVILEGES ON 'my_db'.'my_table' TO 'elleined'.'192.168.1.1';
+
+-- Granting all database and table
+GRANT ALL PRIVILEGES ON '*'.'*' TO 'elleined'.'192.168.1.1';
+
+-- Granting specific database and all tables
+GRANT ALL PRIVILEGES ON 'my_db'.'*' TO 'elleined'.'192.168.1.1';
+
+Step 3: Apply the changes. !DONT FORGET THIS COMMAND OR ELSE ALL THE WORK YOU DO WILL NOT WORK!
+FLUSH PRIVILEGES
+```
 - Make sure your local machine (Where your MySQL Server is installed) and your other device (The device that will connect in your local machine MySQL Server) is connected in the same wifi or network for them to communicate.
 - Get your local machine (Where your MySQL Server is installed) IP Address just search how to get your IPv4 in internet.
 - Once you get your local machine IPv4 Address go in your other device normally you will need:
