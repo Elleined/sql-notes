@@ -361,7 +361,7 @@ FROM table_to_be_copied
 ### [How to backup and restore database](https://github.com/Elleined/mysql-backup-script)
 
 # How to connect to your local machine MySQL Server remotely
-- First create a database user in your local machine (Where your MySQL Server is installed) with specified priviliges you want.
+- First Make sure your local machine (Where your MySQL Server is installed) and your other device (The device that will connect in your local machine MySQL Server) is connected in the same wifi or network for them to communicate.
 ```sql
 -- Step 1. Create user
 -- Template:
@@ -405,17 +405,11 @@ https://www.digitalocean.com/community/tutorials/how-to-allow-remote-access-to-m
 
 Basically you will do is:
 a. Change the bind-address = 0.0.0.0 to allow remote connections because by default mysql server only allow localhost which is 127.0.0.1
-```
-- Make sure your local machine (Where your MySQL Server is installed) and your other device (The device that will connect in your local machine MySQL Server) is connected in the same wifi or network for them to communicate.
-- Get your local machine (Where your MySQL Server is installed) IP Address just search how to get your IPv4 in internet.
-- Once you get your local machine IPv4 Address go in your other device normally you will need:
-  - your local machine IPv4 Address
-  - What port does your local machine MySQL Server is running.
-  - Created user credential username and password you created earlier in your local machine.
-- And thats it you will be able access your local machine MySQL Server with other device.
-```sql
+
+Step 5: Connect ot MySQL Server remotely
 -- In your remote pc
 -- Template:
+-- Via CLI but you can use mysqlk= workbench instead
 mysql -u <username> -p -h <server-ip-address>
 
 -- Example:
