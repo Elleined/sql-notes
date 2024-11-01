@@ -380,7 +380,7 @@ CREATE USER 'elleined'@'%'  IDENTIFIED BY 'elleined';
 
 Step 2: Grant privileges to a user
 -- Template:
-GRANT ALL PRIVILEGES ON '<database-name>'.'<table-name>' TO '<username>'.'<allow-ip-address>';
+GRANT ALL PRIVILEGES ON '<database-name>'.'<table-name>' TO '<username>'@'<allow-ip-address>';
 
 -- WHERE <database-name> is the database that the specified <username> user allowed to access. Use * to allow all database to be accessed.
 -- WHERE <table-name> is the table that the specified <username> user allowed to access within the specified <database-name>. Use * to allow all table to be accessed.
@@ -389,13 +389,13 @@ GRANT ALL PRIVILEGES ON '<database-name>'.'<table-name>' TO '<username>'.'<allow
 
 -- Example:
 -- Granting specific database and table
-GRANT ALL PRIVILEGES ON 'my_db'.'my_table' TO 'elleined'.'192.168.1.1';
+GRANT ALL PRIVILEGES ON 'my_db'.'my_table' TO 'elleined'@'192.168.1.1';
 
 -- Granting all database and table
-GRANT ALL PRIVILEGES ON '*'.'*' TO 'elleined'.'192.168.1.1';
+GRANT ALL PRIVILEGES ON '*'.'*' TO 'elleined'@'192.168.1.1';
 
 -- Granting specific database and all tables
-GRANT ALL PRIVILEGES ON 'my_db'.'*' TO 'elleined'.'192.168.1.1';
+GRANT ALL PRIVILEGES ON 'my_db'.'*' TO 'elleined'@'192.168.1.1';
 
 Step 3: Apply the changes. !DONT FORGET THIS COMMAND OR ELSE ALL THE WORK YOU DO WILL NOT WORK!
 FLUSH PRIVILEGES
