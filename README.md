@@ -85,9 +85,14 @@ ALTER TABLE table_name DROP COLUMN column_name
 ```
 ALTER TABLE table_name RENAME COLUMN old_column_name TO new_column_name
 ```
-###### RENAME
+- ###### RENAME
 ```
 RENAME TABLE old_table_name TO new_table_name
+```
+- ###### Alter column
+```
+ALTER TABLE table_name
+ALTER COLUMN column_name new_data_type;
 ```
 
 ## DQL (Data Query Languange)
