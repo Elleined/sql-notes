@@ -309,6 +309,12 @@ FROM table_name tn
 FULL JOIN another_table_name atn ON tn.primary_key = atn.foreign_key
 ```
 
+## Cross Join
+- Return the cartesian product of the tables
+- Dont need a join condition.
+- For example left table has 6 records amd right table has 4 records what it will do is the every record in left table will be match to 4 records. so with that in mind the ouput will be 24 becuase 1 record of left table will be mapped to all 4 records in right table. its like 1:4 ratio.
+
+
 # Index
 - Is a BTREE data structure that allows you to search faster.
 ```
