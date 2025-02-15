@@ -275,6 +275,40 @@ ORDER BY column_name
 ###### Surrogate Key
 - A system generated-value as primary key.
 # Joins
+## Inner Join/ Join
+- Returns only the matching records between to tables.
+- This usually what we want in program
+- The tables should have relationship the FK.
+```
+SELECT [column_names]
+FROM table_name tn
+INNER JOIN another_table_name atn ON tn.primary_key = atn.foreign_key
+```
+
+## Left Join/ Left Outer Join
+- Returns the matching records and the non-matching records in the left table. Basically doing inner join to return the matching record then returns also the non-matching of the left table.
+```
+SELECT [column_names]
+FROM left_table lt
+LEFT JOIN right_table rt ON lt.primary_key = rt.foreign_key
+```
+
+## Right Join/ Right Outer Join
+- Returns the matching records and the non-matching records in the right table. Basically doing inner join to return the matching record then returns also the non-matching of the right table.
+```
+SELECT [column_names]
+FROM left table lt
+RIGHT JOIN right_table rt ON lt.primary_key = rt.foreign_key
+```
+
+## Full Join/ Full Outer Join
+- This is the result when three of the joins combined the inner join, left join, and the right join. Basically return the matching record and return the nonatching record for both the right and left table.
+```
+SELECT [column_names]
+FROM table_name tn
+FULL JOIN another_table_name atn ON tn.primary_key = atn.foreign_key
+```
+
 # Index
 - Is a BTREE data structure that allows you to search faster.
 ```
