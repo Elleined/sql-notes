@@ -116,12 +116,24 @@ SELECT column1, column2, ... FROM table_name
 - GRANT
 - REVOKE
 
-# 5 Aggregate Function
+# Windows Function
+## 3 Types of Windows function
+![types-of-window-functions](https://github.com/user-attachments/assets/f150a733-a096-48a1-9cd4-da877506cab7)
+
+### 5 Aggregate Function
 - **SUM(column_name)**
 - **AVG(column_name)**
 - **MIN(column_name)**
 - **MAX(column_name)**
 - **COUNT(column_name)**
+
+### Analytical window function
+- **RANK**
+- **DENSE_RANK**
+- **ROW_NUMBER**
+- **CUME_DIST**
+- **LAG**
+- **LEAD**
 
 # Data Types
 ## Text Data Types
