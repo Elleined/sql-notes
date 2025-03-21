@@ -275,6 +275,17 @@ SELECT column_name
 FROM table_name
 ORDER BY column_name
 ```
+- **USING**: Used when the columns of joining tables are exactly the same.
+```
+SELECT *
+FROM left_table
+JOIN right_table ON left_table.record_id = right_table.record_id;
+-- instead
+SELECT *
+FROM left_table
+JOIN right_table USING (record_id);
+```
+
 # Keys
 ###### Primary Key
 - A value that uniquely identifies a record/ row.
