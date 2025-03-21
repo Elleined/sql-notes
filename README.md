@@ -337,6 +337,28 @@ FULL JOIN another_table_name atn ON tn.primary_key = atn.foreign_key
 - Dont need a join condition.
 - For example left table has 6 records amd right table has 4 records what it will do is the every record in left table will be match to 4 records. so with that in mind the ouput will be 24 becuase 1 record of left table will be mapped to all 4 records in right table. its like 1:4 ratio.
 
+## Compound Join
+- When table is cannot be uniquely identified with single column usually a table thats not have primary key. instead it can be uniquely identified with 2 or more columns.
+- The real world example for this is the employee, product, and order tables where each order record does not have primary key instead its uniquely identified based on given product and employee.
+
+## Natural Join
+- The database engine will join the tables based on common column_names existed in both tables. Its dangerous to use this because we are letting the database engine to guess the columns to join instead of use defining it because and this join are not recommended because it produces random results when database table columns name are modified.
+```
+SELECT *
+FROM left_table
+NATURAL JOIN right_table 
+```
+
+## Union Join
+- Is used to combined result set of multiple queries.
+- Basically it will merge all the result set of both queries
+```sql
+SELECT name
+FROM employee
+UNION
+SELECT name
+FROM product
+```
 
 # Index
 - Is a BTREE data structure that allows you to search faster.
