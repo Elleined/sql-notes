@@ -269,11 +269,25 @@ SELECT column_name
 FROM table_name
 WHERE <condition>
 ```
-## GROUP BY
-- Used to display data in groups
-- GROUP BY can only be used if the query uses AGGREGATE functions
-- When using it you saying like "Show us the count of orders, but group the count by each product"
-- Selected fields are usually used also in GROUP BY column
+- **GROUP BY**
+  - Used to display data in groups
+  - GROUP BY can only be used if the query uses AGGREGATE functions
+  - When using it you saying like "Show us the count of orders, but group the count by each product"
+  - Selected fields are usually used also in GROUP BY column
+```
+SELECT column_name, COUNT(*)
+FROM table_name
+GROUP BY column_name
+```
+- **HAVING**
+  - Is usually used after GROUP BY, it filters data but in groups
+  - Usually used with AGGREGATE functions
+```
+SELECT column_name, COUNT(*)
+FROM table_name
+GROUP BY column_name
+HAVING SUM(another_column_name) > 1000;
+```
 - **ORDER BY**: Used to sort the returned rows via specified column with ascending as default.
 ```
 SELECT column_name
