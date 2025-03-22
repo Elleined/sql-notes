@@ -312,6 +312,17 @@ SELECT *
 FROM left_table
 JOIN right_table USING (record_id);
 ```
+- **CASE**: Just like switch in any other languange you should know this.
+```
+CASE
+  WHEN expression THEN return_value
+  WHEN expression THEN return_value      ELSE default_value
+END
+```
+- **IF**: just like in any languange if you should know this. looks like a ternary operator.
+```
+IF(expression, true, false)
+```
 
 # Keys
 ###### Primary Key
