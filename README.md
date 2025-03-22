@@ -116,24 +116,32 @@ SELECT column1, column2, ... FROM table_name
 - GRANT
 - REVOKE
 
-# Windows Function
-## 3 Types of Windows function
-![types-of-window-functions](https://github.com/user-attachments/assets/f150a733-a096-48a1-9cd4-da877506cab7)
+# Built-in Functions
+- **Scalar Functions**: Operates in row level or we should say single row and returns single row. 
+- **Aggregate Function**: Operates in column level or we should say multiple rows and returns single row. Also these functions are also used to access GROUP BY and HAVING clauses.  
 
-### 5 Aggregate Function
-- **SUM(column_name)**
-- **AVG(column_name)**
-- **MIN(column_name)**
-- **MAX(column_name)**
-- **COUNT(column_name)**
+## Scalar Functions
+- **Numeric functions**:
+- **String functions**:
+- **Date and Time functions**:
+- **Miscellaneous functions**:
+  - **IFNULL and COALESCE functions**:
+    - Returns the first non null value in the given argument else returns the specified value if all the arguments are null
+    ```
+    SELECT COALESCE(column_name1,            column_name2, default_value);
+    ```
+    - Here if column_name1 is NOT NULL  it returns the column_name1 value
+    - if column_name1 is NULL then proceed to column_name2 if column_name2 is NOT NULL it returns the column_name2.
+    - If both of the column_name1 and column_name2 is NULL it returns the default value.
 
-### Analytical window function
-- **RANK**
-- **DENSE_RANK**
-- **ROW_NUMBER**
-- **CUME_DIST**
-- **LAG**
-- **LEAD**
+    So basically in IFNULL the same logic is applied the difference is IFNULL only takes 1 arguments unlike COALESCE it takes multiples arguments before returning the default value.
+
+## 5 Aggregate Function
+- **SUM(column_name)**: Returns the sum of a given numeric column.  
+- **AVG(column_name)**: Returns the average of given numeric column.  
+- **MIN(column_name)**: Returns the minimum value of given column.  
+- **MAX(column_name)**: Returns the maximum value of given column.  
+- **COUNT(column_name)**: Returns the total record of given column.  
 
 # Data Types
 ## Text Data Types
@@ -460,14 +468,6 @@ AGAINST (value_you_want_to_search)
 - ###### -: Means keyword must not be in each row returned.
 - ###### *: Serves as wildcard
 - ###### ": Means MySQL will literally search the table with the exact phrase.
-
-### Copy table data into another table
-```
-INSERT INTO new_table_name (columns...)
-SELECT column_names_to_be_copied
-FROM table_to_be_copied
-```
-### [How to backup and restore database](https://github.com/Elleined/mysql-backup-script)
 
 # How to connect to your local machine MySQL Server remotely
 - First Make sure your local machine (Where your MySQL Server is installed) and your other device (The device that will connect in your local machine MySQL Server) is connected in the same wifi or network for them to communicate.
