@@ -411,6 +411,33 @@ ON table_name (column_name...)
 - [x] Make INSERT, DELETE, and UPDATE slower
 ###### Because adding indexes takes up storage just like the indexing in the book it makes searching easier with help of indec but inserting, deleting, and updating of content will become slower because you need to adjust all the index and it also consume more pages making it heavy same thing with MySQL index.
 
+# Parameter
+## 2 types of parameter
+- **IN**: Used to pass values into procedures and functions
+Cannot be modified inside.
+- **OUT**: Used to return values from prcedures and functions. Basically your return type will be initialize null and can be modified inside.
+
+# Variable
+## Session variables
+- Prefixed with @
+- Available only for 1 session or 1 run
+No declaration needed.
+- Created when you assign a value.
+```
+SET @age = 18
+SELECT @age
+```
+
+# Local variables
+- Created using DECLARE keyword
+Only available/ scoped within the stored procedure, function, and trigger.
+- Must be declared before using.
+```
+DECLARE variable_name data_type
+or
+DECLARE age INT
+```
+
 # Function
 - Used to passed a argument then strictly return single row.
 ```
