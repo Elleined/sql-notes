@@ -139,15 +139,15 @@ SELECT column1, column2, ... FROM table_name
   ```
   - **TRUNCATE**: removes the decimal places of the number.
   ```sql
-  SELECT TRUNCATE(number, decimal_places)
-  SELECT TRUNCATE(12.45, 2)
+  SELECT TRUNCATE(number, decimal_places_to_retained)
+  SELECT TRUNCATE(12.45, 0)
   -- outputs 12
   ```
   - **ROUND**: returns the rounded number.
   ```sql
-  SELECT ROUND(decimal, decimal_places)
-  SELECT ROUND(12.45678, 2)
-  -- outputs 12.46
+  SELECT ROUND(decimal, decimal_places_to_retained)
+  SELECT ROUND(12.45678, 0)
+  -- outputs 12
   ```
   - **MOD**: returns the remainder of the specified arguments.
   ```sql
