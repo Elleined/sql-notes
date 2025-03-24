@@ -121,7 +121,56 @@ SELECT column1, column2, ... FROM table_name
 - **Aggregate Function**: Operates in column level or we should say multiple rows and returns single row. Also these functions are also used to access GROUP BY and HAVING clauses.  
 
 ## Scalar Functions
-- **Numeric functions**:
+- **Numeric functions**
+  - **ABS**: removes any sign of the number, thus returning the absolute number.
+  ```sql
+  SELECT ABS(-12.5)
+  -- outputs 12.5
+  ```
+  - **FLOOR**: returns the nearest lowest number.
+  ```sql
+  SELECT FLOOR(12.45)
+  -- outputs 12
+  ```
+  - **CEIL**: returns the nearest largest number.
+  ```sql
+  SELECT CEIL(12.45)
+  -- outputs 13
+  ```
+  - **TRUNCATE**: removes the decimal places of the number.
+  ```sql
+  SELECT TRUNCATE(number, decimal_places)
+  SELECT TRUNCATE(12.45, 2)
+  -- outputs 12
+  ```
+  - **ROUND**: returns the rounded number.
+  ```sql
+  SELECT ROUND(decimal, decimal_places)
+  SELECT ROUND(12.45678, 2)
+  -- outputs 12.46
+  ```
+  - **MOD**: returns the remainder of the specified arguments.
+  ```sql
+  SELECT MOD(divident, divisor)
+  SELECT MOD(10, 3)
+  -- outputs 1
+  ```
+  - **SQRT**: returns the square root of a number.
+  ```sql
+  SELECT SQRT(16)
+  -- outputs 4
+  ```
+  - **POWER**: raise the number to the power of another.
+  ```sql
+  SELECT POWER(base, exponent)
+  SELECT POWER(2, 3) same as 2 x 2 x 2
+  -- outputs 8
+  ```
+  - **RAND**: returns a floating point number between 0 and 1.
+  ```sql
+  SELECT RAND()
+  -- outputs 0.0012323
+  ```
 - **String functions**:
 - **Date and Time functions**:
 - **Miscellaneous functions**:
