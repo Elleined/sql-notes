@@ -172,16 +172,51 @@ SELECT column1, column2, ... FROM table_name
   -- outputs 0.0012323
   ```
 - **String functions**:
-  - **CONCAT**:
+  - **CONCAT**: merge all the specified string into 1 output.
   ```sql
+  SELECT CONCAT(names...)
+  SELECT('Hello', 'World')
+  -- outputs Hello World
   ```
   - **SUBSTRING**:
-  - **LENGTH**:
-  - **UPPER**:
-  - **LOWER**:
-  - **TRIM**:
+  ```sql
+  SELECT SUBSTRING(stack, start, end)
+  SELECT SUBSTRING("Hello World", 2, 5)
+  -- outputs ello 
+  ```
+  - **LENGTH**: returns the length pf the given string.
+  ```sql
+  SELECT LENGTH("Hello World")
+  -- outputs 11
+  ```
+  - **UPPER**: converts string inyo uppercase characters.
+  ```sql
+  SELECT UPPER("hello world")
+  -- outputs HELLO WORLD
+  ```
+  - **LOWER**: converts string into lowercase characters.
+  ```sql
+  SELECT LOWER("HELLO WORLD")
+  -- outputs hello world
+  ```
+  - **TRIM**: removes leading and trailing whitespace.
+  ```sql
+  SELECT TRIM("   Hello World   ")
+  - outputs Hello World
+  ```
   - **REPLACE**:
-  - **INSTR**:
+  ```sql
+  SELECT REPLACE(string, new_string, old_string)
+
+  SELECT REPLACE("Hello World", "H", "W")
+  -- outputs Wello World
+  ```
+  - **INSTR**: returns the index of given needle to the haystack
+  ```sql
+  SELECT INSTR(haystack, needle)
+  SELECT INSTR("Hello", H)
+  -- outputs 1
+  ```
 - **Date and Time functions**:
 - **Miscellaneous functions**:
   - **IFNULL and COALESCE functions**:
