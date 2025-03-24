@@ -172,6 +172,16 @@ SELECT column1, column2, ... FROM table_name
   -- outputs 0.0012323
   ```
 - **String functions**:
+  - **CONCAT**:
+  ```sql
+  ```
+  - **SUBSTRING**:
+  - **LENGTH**:
+  - **UPPER**:
+  - **LOWER**:
+  - **TRIM**:
+  - **REPLACE**:
+  - **INSTR**:
 - **Date and Time functions**:
 - **Miscellaneous functions**:
   - **IFNULL and COALESCE functions**:
