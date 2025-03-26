@@ -218,6 +218,16 @@ SELECT column1, column2, ... FROM table_name
   -- outputs 1
   ```
 - **Date and Time functions**:
+  - **NOW**:
+  - **YEAR**:
+  - **MONTH**:
+  - **DAY**:
+  - **HOUR**:
+  - **MINUTE**:
+  - **SECOND**:
+  - ****:
+  - ****:
+  - ****:
 - **Miscellaneous functions**:
   - **IFNULL and COALESCE functions**:
     - Returns the first non null value in the given argument else returns the specified value if all the arguments are null
@@ -268,10 +278,11 @@ SELECT column1, column2, ... FROM table_name
 - BIGINT
 
 ## Date and Time Data Types
-- DATE
-- TIME
-- DATETIME
-- TIMESTAMP
+- DATE (YYYY-MM-DD)
+- TIME (HH:MI:SS)
+- DATETIME (YYYY-MM-DD HH:MI:SS)
+- TIMESTAMP (YYYY-MM-DD HH:MI:SS)
+- YEAR (YYYY)
 
 # Operators
 ## Special Operators
