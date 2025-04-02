@@ -535,17 +535,76 @@ END
 IF(expression, true, false)
 ```
 
-# Keys
-###### Primary Key
-- A value that uniquely identifies a record/ row.
-###### Foreign Key
-- A primary key of table that is used in another table.
-###### Candidate Key
-- A value that can be choosen as primary key also.
-###### Alternate Key
-- A candidate key that is not choosen as primary key.
-###### Surrogate Key
-- A system generated-value as primary key.
+# Different types of Database keys
+1. Primary key
+	- A value that uniquely identifies a record/ row
+
+2. Foreign key
+	- A primary key of table that is used in another table.
+
+3. Composite key
+	- A Set of column to uniquely identify a row. Like order table having columns of orderID and customerID to uniquely identify a single row.
+
+4. Candidate key
+	- Set of column that can be used also to uniquely identify a row. like email address in 
+person table where email address is unique for every row.
+	- Single table can have multiple candidate key.
+	- Set of column that can be also used as primary key.
+
+5. Alternate key
+	- Alias for candidate key
+	- Because alternate key is just an candidate key that is not chosen as primary key.
+
+6. Surrogate key
+	- A system generated artificial or synthetic key used to uniquely identify a record in database. Such as auto increment integer value or UUID.
+	- It has no business meaning and is usually a single value.
+
+7. Non key
+	- Any columns that is not part of primary key or candidate key
+
+# What is normalization
+- Designing database effectively such that avoid data redundancy. This will help up avoid different types of anomalies.
+
+# What is data redundancy just an alias for Data duplication
+
+# Anomalies
+1. Insert anomaly
+2. Update anomaly
+3. Delete anomaly
+
+# Different levels of Database normalization
+
+## 1NF
+1. All rows unique and atomic (no duplicate rows)
+	1.1 not mandatory to have primary key (composite key)
+2. Each cell must contain only single value (not a list)
+3. Each value should be non divisible (can't be split down further)
+4. Each value should have only have  1 data type (no mixture of numbers and alphabet)
+
+### Conclusions
+- So not having primary key in a table are not compliant in 1NF
+- So having a field full_name in a single column is not compliant to 1NF because in item no.3 says that each value should be non divisible. So that full name should 2 different column like first name and last name.
+
+## 2NF
+1. No partial dependencies - all non-prime attributes should be fully dependent on the primary key, candidate key, or composite keys.
+2. Database should be in First Normal Form
+3. Every table should have primary key and relationship between tables should be formed using foreign key.
+
+### Conclusions
+- All columns should be dependent and related to the primary key as states to item no.1. For example, you have a table with columns of studentID and courseID, and course fee here course fee has nothing to do with studentID and only related to courseID, What we do here is separate this course fee column into separate table now we have student_courses table having studentID and courseID columns and second table having courseID and course fee columns with this approach we separated course fee into separate table now course fee is related to courseID; studentID and courseID is now composite keys in separate table .
+
+## 3NF
+1. No transitive dependencies - All fields must only be determinable by the primary/ composite key, not by other keys.
+2. Database must be in first and second normal form
+
+## 4NF
+
+## BCNF (Boyce-Codd normal form)
+
+## 5NF
+
+## 6NF
+
 # Joins
 ## Inner Join/ Join
 - Returns only the matching records between to tables.
