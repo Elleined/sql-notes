@@ -218,16 +218,122 @@ SELECT column1, column2, ... FROM table_name
   -- outputs 1
   ```
 - **Date and Time functions**:
-  - **NOW**:
-  - **YEAR**:
-  - **MONTH**:
-  - **DAY**:
-  - **HOUR**:
-  - **MINUTE**:
-  - **SECOND**:
-  - ****:
-  - ****:
-  - ****:
+  - **DAYNAME**:
+    ```sql
+    SELECT DAYNAME(NOW())
+    -- outputs Monday - Friday
+    ```
+  - **MONTHNAME**:
+    ```sql
+    SELECT MONTHNAME(NOW())
+    -- outputs January - December
+    ```
+  - **DATEADD**: with interval, it adds the specified interval to the current date.
+    ```sql
+    SELECT DATE_ADD(NOW(), INTERVAL 1 YEAR);
+    -- if the current date is 2025-04-02 10:36:00
+    -- outputs 2026-04-02 10:36:00
+    ```
+  - **DATESUB**: with interval, it subtracts the specified interval to the current date.
+    ```sql
+    SELECT DATE_SUB(NOW(), INTERVAL 1 YEAR);
+    -- if the current date is 2025-04-02 10:36:00
+    -- outputs 2024-04-02 10:36:00
+    ```
+  - **ADDTIME**:
+    ```sql
+    SELECT ADDTIME(NOW(), "1:00:00");
+    -- if the current date is 2025-04-02 10:36:00
+    -- outputs 2025-04-02 11:36:00
+    ```
+  - **SUBTIME**:
+    ```sql
+    SELECT SUBTIME(NOW(), "1:00:00");
+    -- if the current date is 2025-04-02 10:36:00
+    -- outputs 2025-04-02 09:36:00
+    ```
+  - **CURDATE**:
+    ```sql
+    SELECT CURDATE()
+    -- outputs yyyy-mm-dd 2025-10-03
+    ```
+  - **CURTIME**:
+    ```sql
+    SELECT CURTIME()
+    -- outputs hh:mm:ss 10:00:00
+    ```
+  - **EXTRACT**:
+    ```sql
+    
+    -- outputs
+    ```
+  - **DATE**: returns the date in date time, So if you have 2025-04-02 12:41:54
+    ```sql
+    SELECT DATE(NOW())
+    -- outputs 2025-04-02
+    ```
+  - **TIME**: returns the time in date time, So if you have 2025-04-02 12:41:54
+    ```sql
+    SELECT TIME(NOW()); 
+    -- outputs 12:41:54
+    ```
+  - **YEAR**: returns the year in date time, So if you have 2025-04-02 12:41:54
+    ```sql
+    SELECT YEAR(NOW());
+    -- outputs 2025
+    ``` 
+  - **MONTH**: returns the month in date time, So if you have 2025-04-02 12:41:54
+    ```sql
+    SELECT MONTH(NOW());
+    -- outputs 4
+    ```
+  - **DAY**: returns the day in date time, So if you have 2025-04-02 12:41:54
+    ```sql
+    SELECT DAY(NOW());
+    -- outputs 2
+    ```
+  - **HOUR**: returns the hour in date time, So if you have 2025-04-02 12:41:54
+    ```sql
+    SELECT HOUR(NOW());
+    -- outputs 12
+    ```
+  - **MINUTE**: returns the minute in date time, So if you have 2025-04-02 12:41:54
+    ```sql
+    SELECT MINUTE(NOW());
+    -- outputs 41
+    ```
+  - **SECOND**: returns the second in date time, So if you have 2025-04-02 12:41:54
+    ```sql
+    SELECT SECOND(NOW());
+    -- outputs 54
+    ```
+  - **MICROSECOND**:
+    ```sql
+    SELECT MICROSECOND(NOW());
+    -- outputs
+    ```
+
+- INTERVALS
+  - MICROSECOND
+	- SECOND
+	- MINUTE
+	- HOUR
+	- DAY
+	- WEEK
+	- MONTH
+	- QUARTER
+	- YEAR
+	- MINUTE_MICROSECOND
+	- MINUTE_SECOND
+	- HOUR_MICROSECOND
+	- HOUR_SECOND
+	- HOUR_MINUTE
+	- DAY_MICROSECOND
+	- DAY_SECOND
+	- DAY_MINUTE
+	- DAY_HOUR
+	- YEAR_MONTH
+ 
 - **Miscellaneous functions**:
   - **IFNULL and COALESCE functions**:
     - Returns the first non null value in the given argument else returns the specified value if all the arguments are null
