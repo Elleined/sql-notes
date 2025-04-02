@@ -666,6 +666,7 @@ DELIMITER ;
 - You cannot use stored procedure inside function
 - Can only return strictly one row.
 - Commonly used to passed a primary key to return single value from primary key row.
+- Primarily used for returning single row for SELECT statement.
 # Stored Procedure
 - Used to have pre-compiled query that can be executed for repititive task.
 ```
@@ -684,6 +685,7 @@ DELIMITER ;
 - You can used function inside stored procedure.
 - You can return multiple rows in stored procedure.
 - Stored procedure is also used for security and access control.
+- Primarily used for INSERT/ UPDATE/ DELETE and for complex queries
 # Views
 - Is a virtual table that is based on the result set of the real table. Any modifications in a real table will also affect the views. Basically views are like creating a virtual table that is branching out from the real table and can also be interacted just like a real table.
   
@@ -692,10 +694,13 @@ DELIMITER ;
 ### Why use view
 - Restrict the user from seeing the real table structure thus adding extra layer of security.
 - Abstracts/ Simplify the complex query returned from the complex real table and complex table joinings.
+- Primarily used for complex SELECT statement like joining tables and etc...
+- 
 
 ### Views Restrictions
 - Cannot create index in views.
 - Cannot create trigger in views.
+- If underlying table changes (renamed column or deleted column) you need to redefined the views.
 
 
 # Realization for stored procedure, function, and views
