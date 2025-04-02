@@ -697,6 +697,12 @@ DELIMITER ;
 - Cannot create index in views.
 - Cannot create trigger in views.
 
+
+# Realization for stored procedure, function, and views
+- So basically views is used for complex select statement. This can be also done in stored procedure but views is more recommended when it comes to complex select queries.
+- So basically stored procedure is most use in INSERT/ UPDATE/ DELETE.
+- So basically function is used for single row select statement queries and non-modifying queries.
+
 # Triggers
 
 # Fulltext search
