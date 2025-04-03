@@ -557,8 +557,8 @@ person table where email address is unique for every row.
 	- Because alternate key is just an candidate key that is not chosen as primary key.
 
 6. Surrogate key
-	- A system generated artificial or synthetic key used to uniquely identify a record in database. Such as auto increment integer value or UUID.
-	- It has no business meaning and is usually a single value.
+	- A system generated artificial or synthetic key used to uniquely identify a record in database and has no business meaning. Such as auto increment integer value or UUID.
+	- It has no business meaning, not derived from business data (SSN and email), and immutable.
 
 7. Non key
 	- Any columns that is not part of primary key or candidate key
