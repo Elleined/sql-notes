@@ -557,10 +557,18 @@ person table where email address is unique for every row.
 	- Because alternate key is just an candidate key that is not chosen as primary key.
 
 6. Surrogate key
-	- A system generated artificial or synthetic key used to uniquely identify a record in database and has no business meaning. Such as auto increment integer value or UUID.
-	- It has no business meaning, not derived from business data (SSN and email), and immutable.
+	- A system generated artificial or synthetic key used to uniquely identify a record in database and has no business meaning.
+	- It has no business meaning
+ 	- Not derived from business or real world data (UUID and Auto increment value), and immutable.
+	- So defining `id BIGINT PRIMARY KEY AUTO_INCREMENT` is also considered as surrogate key.
 
-7. Non key
+7. Natural key
+	- Derived from business or real world data (email and phoneNumber) that can uniquely identify a record. Unlike surrogate key that has no business meaning.
+	- from the word itself natural. For example a employee record its natural for every employee that their email address is unique so that email becomes as natural key or candidate key.
+	- Has real-world meaning
+	- unlike surrogate key which is immutable, natural key is subjected to change overtime like their email it is subjected to change right? but a auto increment value are not subjected to change.
+
+8. Non key
 	- Any columns that is not part of primary key or candidate key
 
 # What is normalization
