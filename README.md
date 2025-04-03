@@ -567,10 +567,17 @@ person table where email address is unique for every row.
 
 # What is data redundancy just an alias for Data duplication
 
-# Anomalies
+# 3 Types of Data Anomalies
+- Occurs in denormalize dataset. That's why we should normalize our tables to avoid these anomalies.
 1. Insert anomaly
+   - Is basically inserting multiple duplicated data. Like in order table, when customer create order you insert the customer data and product data multiple times in same table leading to data redundancy, multiple source of truth, and lead to inconsistent data.
+   - Multiple null values when inserting a new record. Like in order table, when your company introduce a new product when you insert the product the customer and order columns are nulls.
+     
 2. Update anomaly
+   - Let's take for example in order table since its in unormalized state so basically multiple same product is present in every record so when you need to update the price of a certain product what you will do is also update other record in database table imagine if that product is inserted a million times so basically you will be updating a million record also. Which is super dangerous and crucial.
+     
 3. Delete anomaly
+   - When you need to delete a certain record in denormalized database even you only need to delete a certain order what will happen is customer and product record will be deleted also because they are stored in single row which is super crucial and dangerous.
 
 # Different levels of Database normalization
 ## 1NF
