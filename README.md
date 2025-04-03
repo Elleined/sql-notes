@@ -615,7 +615,8 @@ and studentName is dependent in studentID but not in courseID (studentName is pa
 ## 3NF
 So basically 3NF is industry standard most of the database tables ends up here.
 1. No transitive dependencies - All fields should be fully dependent on key columns. Not by non key columns
-2. Database must be in first and second normal form
+2. Every non-key attribute in a table should depend on the key, the whole key, nothing but the key.
+3. Database must be in first and second normal form
 
 ### Example of no transitive dependencies
 - So having reached 2NF you're almost compliant to 3NF and you just need to ensure that theres no transitive dependencies. You must ensure that all columns are dependent to its table keys not on non-key columns.
