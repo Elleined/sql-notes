@@ -573,7 +573,6 @@ person table where email address is unique for every row.
 3. Delete anomaly
 
 # Different levels of Database normalization
-
 ## 1NF
 1. All rows unique and atomic (no duplicate rows)
 	1.1 not mandatory to have primary key (composite key)
@@ -582,19 +581,18 @@ person table where email address is unique for every row.
 4. Each value should have only have  1 data type (no mixture of numbers and alphabet)
 
 ### Conclusions
-- So not having primary key in a table are not compliant in 1NF
 - So having a field full_name in a single column is not compliant to 1NF because in item no.3 says that each value should be non divisible. So that full name should 2 different column like first name and last name.
 
 ## 2NF
 1. No partial dependencies - all non-prime attributes should be fully dependent on the primary key, candidate key, or composite keys.
 2. Database should be in First Normal Form
-3. Every table should have primary key and relationship between tables should be formed using foreign key.
+3. Relationship between tables should be formed using foreign key.
 
 ### Conclusions
 - All columns should be dependent and related to the primary key as states to item no.1. For example, you have a table with columns of studentID and courseID, and course fee here course fee has nothing to do with studentID and only related to courseID, What we do here is separate this course fee column into separate table now we have student_courses table having studentID and courseID columns and second table having courseID and course fee columns with this approach we separated course fee into separate table now course fee is related to courseID; studentID and courseID is now composite keys in separate table .
 
 ## 3NF
-1. No transitive dependencies - All fields must only be determinable by the primary/ composite key, not by other keys.
+1. No transitive dependencies - All fields must only be determinable by the primary/ composite/ candidate key, not by other keys.
 2. Database must be in first and second normal form
 
 ## 4NF
