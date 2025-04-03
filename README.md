@@ -550,6 +550,7 @@ IF(expression, true, false)
 person table where email address is unique for every row.
 	- Single table can have multiple candidate key.
 	- Set of column that can be also used as primary key.
+	- So defining UNIQUE AND NOT NULL makes a column a candidate key automatically. But making it UNIQUE but allows NULL its not considered as candidate key. Becuase candidate key must be UNIQUE and NOT NULL as its requirements.
 
 5. Alternate key
 	- Alias for candidate key
@@ -595,13 +596,24 @@ person table where email address is unique for every row.
 2. Database should be in First Normal Form
 3. Relationship between tables should be formed using foreign key.
 
-### Conclusions
-- All columns should be dependent and related to the primary key as states to item no.1. For example, you have a table with columns of studentID and courseID, and course fee here course fee has nothing to do with studentID and only related to courseID, What we do here is separate this course fee column into separate table now we have student_courses table having studentID and courseID columns and second table having courseID and course fee columns with this approach we separated course fee into separate table now course fee is related to courseID; studentID and courseID is now composite keys in separate table .
+### Example of no partial dependencies
+**Problem**  
+	So lets take for example a table with columns of studentID, studentName, courseID, and courseName. Here courseName is dependent in courseID but not in studentID (courseName is partially dependent in studentID)
+and studentName is dependent in studentID but not in courseID (studentName is partially dependent in courseID) from the name itself partially its partial only half like that in laymans terms. This violates partial dependencies. So basically partial dependencies meaning all the columns should be dependent on primary and candidate key and both for composite keys.
+
+**Solution**  
+	This means there should be three tables student(id, name), course(id, name), student_course(studentID, courseID) with this approach student table has id and name column which means name is depenedent in id and same logic applies to course table. What we do here is student_course is the linked tables that links student and course table.
 
 ## 3NF
-1. No transitive dependencies - All fields must only be determinable by the primary/ composite/ candidate key, not by other keys.
+So basically 3NF is industry standard most of the database tables ends up here.
+1. No transitive dependencies - All fields should be fully dependent on key columns. Not by non key columns
 2. Database must be in first and second normal form
 
+### Example of no transitive dependencies
+- So having reached 2NF you're almost compliant to 3NF and you just need to ensure that theres no transitive dependencies. You must ensure that all columns are dependent to its table keys not on non-key columns.
+ 
+**Solution**
+	
 ## 4NF
 
 ## BCNF (Boyce-Codd normal form)
