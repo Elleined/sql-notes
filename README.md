@@ -641,7 +641,7 @@ hence in this example:
 3. For this able A, B, and C. B and C should be independent.
 
 ### Problem
-- To visualize more in a table with columns of model, color, and style. In this the example the table is in 3NF because color in dependent on model and style is dependent on model.
+- To visualize more in a table with columns of model, color, and style. In this the example the table is in 3NF because color in dependent on model and style is dependent on model.  
 { model } ->> { color }: Meaning model can have multiple color.  
 { model } ->> { style }: Meaning model can have multiple style.  
 
