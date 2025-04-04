@@ -615,7 +615,7 @@ and studentName is dependent in studentID but not in courseID (studentName is pa
 ## 3NF
 So basically 3NF is industry standard most of the database tables ends up here.
 1. No transitive dependencies - All fields should be fully dependent on key columns. Not by non key columns
-2. Every attribute in a table should depend on the key, the whole key, nothing but the key.
+2. Every non-key attribute in a table should depend on the key, the whole key, nothing but the key.
 3. Database must be in first and second normal form
 
 ### Example of no transitive dependencies
@@ -631,17 +631,33 @@ hence in this example:
 - To solve it we should create a separate table for department (id and name) then another table (employeeID and departmentID).
 
 ## BCNF (Boyce-Codd normal form)
+- Every attribute in a table should depend on the key, the whole key, nothing but the key.
 - Its almost like the 3rd normal form also.
 
 ## 4NF
-- Multivalues dependencies in a table must be multivalued dependency on the key.  
-{ model } ->> { color }  
-{ model } ->> { style }
+### How to detect multi-valued dependency
+1. if A ->> B. If single value of A, more than one value of B exist. just like cross join cartesian product.
+2. Atleast have 3 columns
+3. For this able A, B, and C. B and C should be independent.
+
+### Problem
+- To visualize more in a table with columns of model, color, and style. In this the example the table is in 3NF because color in dependent on model and style is dependent on model.
+{ model } ->> { color }: Meaning model can have multiple color.  
+{ model } ->> { style }: Meaning model can have multiple style.  
+
+### Solution
+- To solve this break this into two different tables (model and color) and (model and style). in this approach we eliminate the multi-valued dependency on the earlier table. So when a client says the he/ she want a certain model with this color we insert this into (model and color). and when he says that he wants model with this style we insert that into (model and style) table. So if we query this we can fetch the possible combination of style and color with a specified model.
 
 ## 5NF
 
 ## 6NF
 ![image](https://github.com/user-attachments/assets/9a6bfc05-9e4f-4548-86a6-4181e9b327e4)
+
+## Definition of terms for database normalization
+1. Functional Dependency
+2. Partial Dependency: Occurs in 2NF, 
+3. Transitive Dependency: Occurs in 3NF,
+4. Multi-valued dependency: Occures in 4NF,
 
 # Joins
 ## Inner Join/ Join
