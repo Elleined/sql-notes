@@ -620,9 +620,10 @@ So basically 3NF is industry standard most of the database tables ends up here.
 
 ### Example of no transitive dependencies
 - So having reached 2NF you're almost compliant to 3NF and you just need to ensure that theres no transitive dependencies. You must ensure that all columns are dependent to its table keys not on non-key columns.
-- So transitive dependency is basically A depends on B and B depends on C, then A depends on C. The A depends on C is the transitive dependency. For example: in a table with columns of employeeID, departmentID, and departmentName. For A -> B (employeeID -> departmentID) and B -> C (departmentID -> departmentName), then A -> C (employeeID -> departmentName) in our example the A -> C (employeeID -> departmentName) is the transitive dependency. To solve it we should create a separate table for department (id and name) then another table (employeeID and departmentID).
- 
+- So transitive dependency is basically A depends on B and B depends on C, then A depends on C. The A depends on C is the transitive dependency. For example: in a table with columns of employeeID, departmentID, and departmentName. For A -> B (employeeID -> departmentID) and B -> C (departmentID -> departmentName), then A -> C (employeeID -> departmentName) in our example the A -> C (employeeID -> departmentName) is the transitive dependency. Meaning there should be 1 level of dependency as states to item no.1 and no.2 every non-key columns should depends on the key, the whole key, nothing but the key.
+
 **Solution**
+- To solve it we should create a separate table for department (id and name) then another table (employeeID and departmentID).
 	
 ## 4NF
 
