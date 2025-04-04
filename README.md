@@ -615,23 +615,33 @@ and studentName is dependent in studentID but not in courseID (studentName is pa
 ## 3NF
 So basically 3NF is industry standard most of the database tables ends up here.
 1. No transitive dependencies - All fields should be fully dependent on key columns. Not by non key columns
-2. Every non-key attribute in a table should depend on the key, the whole key, nothing but the key.
+2. Every attribute in a table should depend on the key, the whole key, nothing but the key.
 3. Database must be in first and second normal form
 
 ### Example of no transitive dependencies
 - So having reached 2NF you're almost compliant to 3NF and you just need to ensure that theres no transitive dependencies. You must ensure that all columns are dependent to its table keys not on non-key columns.
 - So transitive dependency is basically A depends on B and B depends on C, then A depends on C. The A depends on C is the transitive dependency. For example: in a table with columns of employeeID, departmentID, and departmentName. For A -> B (employeeID -> departmentID) and B -> C (departmentID -> departmentName), then A -> C (employeeID -> departmentName) in our example the A -> C (employeeID -> departmentName) is the transitive dependency. Meaning there should be 1 level of dependency as states to item no.1 and no.2 every non-key columns should depends on the key, the whole key, nothing but the key.
+- To visualize more  
+{ studentID } -> { departmentID }  
+{ studentID } -> { departmentID } -> { departmentName }  
+hence in this example:  
+{ studentID } -> { departmentName }. This is the transitive dependency.  
 
 **Solution**
 - To solve it we should create a separate table for department (id and name) then another table (employeeID and departmentID).
-	
-## 4NF
 
 ## BCNF (Boyce-Codd normal form)
+- Its almost like the 3rd normal form also.
+
+## 4NF
+- Multivalues dependencies in a table must be multivalued dependency on the key.  
+{ model } ->> { color }  
+{ model } ->> { style }
 
 ## 5NF
 
 ## 6NF
+![image](https://github.com/user-attachments/assets/9a6bfc05-9e4f-4548-86a6-4181e9b327e4)
 
 # Joins
 ## Inner Join/ Join
