@@ -722,6 +722,19 @@ SELECT name
 FROM product
 ```
 
+# Common Table Expression (CTE)
+- Defined with `WITH` keyword
+- Basically a temporary table that you can (CRUD) to it and only lives in a single query
+- Direct replacement for SUBQUERIES
+syntax
+```sql
+WITH cte_name (column_1, column_2, column_3,...)   
+AS (subquery)     
+
+SELECT * 
+FROM cte_name;
+```
+
 # Index
 - Is a BTREE data structure that allows you to search faster.
 ```
