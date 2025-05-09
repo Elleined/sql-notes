@@ -848,6 +848,25 @@ FROM table_name
 WHERE MATCH (columns_with_fulltext_index)
 AGAINST (value_you_want_to_search)
 ```
+# Transaction
+- queries that must all succeed or fail together
+- When data integrity is critical
+- When data atomicity is critical
+
+## Best use
+1. Best use in service layer and only pass the dbconnection in repository layer
+2. Use transactions when having a group of transaction in one go.
+3. Don't use transaction when only having 1 transaction
+4. It's best to begin the transaction in the higher functions or method callers. Don't use tx in individual saveOrder(), updateInventory(), etc...
+```go
+createOrder() {
+   beginTx()
+      saveOrder()
+      updateInventory()
+      logOrder()
+   endTx()
+}
+```
 
 ###### Fulltext Support
 - ###### +: Means keyword must be present in each row returned.
