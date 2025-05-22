@@ -741,9 +741,14 @@ FROM cte_name;
 CREATE INDEX index_name
 ON table_name (column_name...)
 ```
+
+```
+DROP INDEX index_name ON table_name
+```
 ##### Index Advantage
 - [x] Make SELECT statement faster
 - [x] Make Filtering and sorting faster
+- [x] Make searching, filtering, and sorting faster
 ##### Index Disadvantage
 - [x] Make INSERT, DELETE, and UPDATE slower
 ###### Because adding indexes takes up storage just like the indexing in the book it makes searching easier with help of indec but inserting, deleting, and updating of content will become slower because you need to adjust all the index and it also consume more pages making it heavy same thing with MySQL index.
