@@ -736,7 +736,6 @@ FROM cte_name;
 ```
 
 # Index
-- Is a BTREE data structure that allows you to search faster.
 ```
 CREATE INDEX index_name
 ON table_name (column_name...)
@@ -745,13 +744,24 @@ ON table_name (column_name...)
 ```
 DROP INDEX index_name ON table_name
 ```
+## Types if Indexes
+ 1. INDEX or UNIQUE INDEX: Short content (name, email, and etc...)
+ 2. PREFIX INDEX: part of the content only ()
+ 3. FULLTEXT INDEX: Long contents (product description, context, and email body)
+
+## Kind of Indexes
+1. Single index
+2. Composite index
+	- from LEFT to RIGHT lookup
+	- have 16 columns limit
+    
 ##### Index Advantage
-- [x] Make SELECT statement faster
-- [x] Make Filtering and sorting faster
+- [x] Make SELECT, ORDER BY, and GROUP BY statement faster
 - [x] Make searching, filtering, and sorting faster
 ##### Index Disadvantage
 - [x] Make INSERT, DELETE, and UPDATE slower
 ###### Because adding indexes takes up storage just like the indexing in the book it makes searching easier with help of indec but inserting, deleting, and updating of content will become slower because you need to adjust all the index and it also consume more pages making it heavy same thing with MySQL index.
+
 
 # Parameter
 ## 2 types of parameter
