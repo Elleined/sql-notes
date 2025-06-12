@@ -948,6 +948,15 @@ mysql -u elleined -p -h 192.168.1.2
 ## Analogy
 - So normally to access your MySQL Server in your local machine you user the localhost:3306 and you will access it using other device with 192.168.xxx.xxx:3306 where localhost is your local machine default IP of 127.0.0.1 meanwhile 192.168.xxx.xxx is the IPv4 of your local machine in internet. Thats why you need them to be in the same network for them to communicate so that your other device will communicate/ connect in your local machine IPv4 Address allowing other device to access your local machine MySQL Server. So don't be confuse with localhost and 192.168.xxx.xxx, localhost is your local machine private IP while 192.168.xxx.xxx is your local machine public IP.
 
+# Summarize Database Features
+- views: for simplifying complex SELECT query
+- trigger: for before and after of INSERT, UPDATE, and DELETE operations
+- events: for CRON job
+- functions: for returning single value or row
+- stored procedure: for reusable logic of INSERT, UPDATE, DELETE and sometimes SELECT
+- indexes: for Filtering, Sorting, Searching, also enforce uniqueness
+- cte: for disposable temporary table that you can use without creating a view
+
 # Cool commands
 ## Quickly copy a table
 - It will copy all the data but not the table attributes
